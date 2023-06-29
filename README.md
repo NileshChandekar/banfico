@@ -492,6 +492,13 @@ tion refused
 
 
 
+![iameg](https://github.com/NileshChandekar/banfico/blob/main/images/Screenshot%202023-06-29%20at%209.17.01%20PM.png)
+
+![iameg](https://github.com/NileshChandekar/banfico/blob/main/images/Screenshot%202023-06-29%20at%209.17.52%20PM.png)
+
+
+
+
 
 
 
