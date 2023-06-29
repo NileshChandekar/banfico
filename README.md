@@ -456,5 +456,42 @@ root@saif-osa-bionic-deploy:/tmp/banfico# curl --insecure https://my-google.com 
   <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
 root@saif-osa-bionic-deploy:/tmp/banfico# 
 ```
+* Stoped haproxy on one of the node [haproxy2]
+```
+[root@haproxy2 ~]# systemctl status  haproxy | grep -i active
+   Active: inactive (dead)
+[root@haproxy2 ~]#
+```
+
+* Still web page is accessible
+
+```
+Every 2.0s: curl --insecure https://my-google.com | grep -i href                            saif-osa-bionic-deploy: Thu Jun 29 15:36:03 2023
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0c100  1561  100  1561    0     0  10406      0 --:--:-- --:--
+:-- --:--:-- 10406
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+```
+
+```
+[root@haproxy1 ~]# systemctl status  haproxy | grep -i active
+   Active: inactive (dead)
+[root@haproxy1 ~]#
+```
+
+```
+Every 2.0s: curl --insecure https://my-google.com | grep -i href                            saif-osa-bionic-deploy: Thu Jun 29 15:37:25 2023
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (7) Failed to connect to my-google.com port 443: Connec
+tion refused
+```
+
+
+
+
 
 
